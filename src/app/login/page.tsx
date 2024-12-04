@@ -1,16 +1,20 @@
+import Particles from "../components/Particles";
 import { Input } from "../components/input";
 
 const Login: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col p-10 items-center justify-center h-screen">
-        <h1 className="text-[20px] font-bold">
-          <span className="text-black-500 font-overpass">Login</span>
+      <div className="fixed inset-0 bg-black bg-center pointer-events-none -z-10">
+        <Particles />
+      </div>
+      <div className="flex flex-col  p-10 items-center justify-center h-screen space-y-2">
+        <h1 className="text-[40px] font-bold">
+          <span className="text-white font-overpass">Login</span>
           <span className="text-blue-500">.</span>
         </h1>
         <div className="space-y-2">
           <Input type="email" placeholder="Email" />
-          <Input type="password" placeholder="Password" />
+          <Input type="password" placeholder="Password" content="white" />
         </div>
       </div>
     </>
