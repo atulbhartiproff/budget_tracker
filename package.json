@@ -2,7 +2,7 @@
   "name": "budget",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/atulbhartiproff/budget_tracker",
+  "homepage": "https://atulbhartiproff.github.io/budget_tracker/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +10,6 @@
     "lint": "next lint",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
