@@ -15,7 +15,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { color } from "chart.js/helpers";
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -38,11 +37,11 @@ const transactionData = [
   { vendor: "Hackathon", date: "2025-02-03T16:00:00", amount: 2000 },
 ];
 
-interface Transaction {
-  vendor: string;
-  date: string;
-  amount: number;
-}
+// interface Transaction {
+//   vendor: string;
+//   date: string;
+//   amount: number;
+// }
 
 const App: React.FC = () => {
   // Process data for daily expenditure

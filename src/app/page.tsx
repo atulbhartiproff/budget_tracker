@@ -1,5 +1,4 @@
 import Particles from "@/app/components/Particles";
-import { Wallet } from "./components/icons";
 // import Button from "./components/buttons"; Issue: Button cant be called for some reason i dont understand for now
 import Link from "next/link";
 
