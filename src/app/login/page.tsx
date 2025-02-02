@@ -1,5 +1,6 @@
 import Particles from "../components/Particles";
 import { Input } from "../components/input";
+import "./sumbit.css";
 
 const Login: React.FC = () => {
   return (
@@ -12,9 +13,12 @@ const Login: React.FC = () => {
           <span className="text-white font-overpass">Login</span>
           <span className="text-blue-500">.</span>
         </h1>
-        <div className="space-y-2">
-          <Input type="email" placeholder="Email" />
-          <Input type="password" placeholder="Password" content="white" />
+        <div>
+          <form className="space-y-2">
+            <Input type="email" placeholder="Email" />
+            <Input type="password" placeholder="Password" content="white" />
+            <Input type="submit" value="Login" id="submit" />
+          </form>
         </div>
       </div>
     </>
