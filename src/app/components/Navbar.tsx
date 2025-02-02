@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
 
         <Link href="/register">Register</Link>
 
-        <Link href="/tracker">Tracker</Link>
+        <Link href="/">Home</Link>
       </nav>
     </>
   );
