@@ -2,19 +2,29 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href="/login">Login</Link>
-        </li>
-        <li>
-          <Link href="/register">Register</Link>
-        </li>
-        <li>
-          <Link href="/tracker">Tracker</Link>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav
+        style={{
+          color: "white",
+          position: "fixed",
+          top: "0",
+          right: "0",
+          width: "auto",
+          padding: "10px",
+          display: "flex",
+          gap: "10px",
+          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundColor: "transparent",
+        }}
+      >
+        <Link href="/login">Login</Link>
+
+        <Link href="/register">Register</Link>
+
+        <Link href="/tracker">Tracker</Link>
+      </nav>
+    </>
   );
 };
 

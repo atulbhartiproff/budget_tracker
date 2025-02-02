@@ -1,0 +1,28 @@
+/* Navbar container */
+.nav {
+  color: aliceblue;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    padding: 10px; 
+    display: flex; 
+    gap: 15px; 
+    background-color: transparent; 
+  }
+  
+  /* Style for individual links */
+  .nav-link {
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 20px; /* Add padding to the links */
+    background-color: blue; /* Set the background color to blue */
+    color: white; /* Set the text color to white */
+    border-radius: 25px; /* Rounded corners */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for links */
+  .nav-link:hover {
+    background-color: darkblue; /* Darker blue when hovering */
+  }
+  

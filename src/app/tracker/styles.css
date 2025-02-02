@@ -1,0 +1,36 @@
+
+th, td {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 8px; 
+}
+
+th{
+    color: rgba(255, 251, 0, 0.699);
+    font-family: overpass;
+    font-weight: bold;
+    font-size: 25px;
+}
+#lol{
+    font-size: 50px;
+    font-family: overpass;
+    font-weight: bold;
+}
+
+.h2{
+    font-size: 20px;
+    font-family: overpass;
+    font-weight: bold;
+}
+
+#hmm{
+    font-size: 20px;
+    font-family: overpass;
+    font-weight: bold;
+}
+
+.graphbox{
+    width: "100%";
+    height: "100%"; 
+    text-align: "center";
+    justify-content: "center";
+}
