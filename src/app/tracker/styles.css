@@ -1,3 +1,13 @@
+table{
+    width: 80%;
+    border-Collapse: collapse;
+    text-Align: center;
+    border-Radius: 10px;
+    border: 2px solid red;
+    max-height: 400px;
+    overflow-y:auto;
+}
+
 
 th, td {
     border: 1px solid rgb(255, 255, 255);
@@ -9,6 +19,14 @@ th{
     font-family: overpass;
     font-weight: bold;
     font-size: 25px;
+}
+
+#graphplane{
+    width: 80vw;
+    margin-Top: 30px;
+    display: flex;
+    justify-Content: space-between;
+    align-items: center;
 }
 #lol{
     font-size: 50px;

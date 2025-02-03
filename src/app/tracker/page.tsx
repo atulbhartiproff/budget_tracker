@@ -35,7 +35,6 @@ const transactionData = [
   { vendor: "Hackathon", date: "2025-02-03T16:00:00", amount: 2000 },
 ];
 
-
 const App: React.FC = () => {
   const transactionsByDay: { [key: string]: number } = {};
   const transactionsByMonth: { [key: string]: number } = {};
@@ -43,7 +42,7 @@ const App: React.FC = () => {
   transactionData.forEach((transaction) => {
     const date = new Date(transaction.date);
     const day = date.toISOString().split("T")[0];
-    const month = date.toISOString().split("T")[0].slice(0, 7); 
+    const month = date.toISOString().split("T")[0].slice(0, 7);
 
     transactionsByDay[day] = (transactionsByDay[day] || 0) + transaction.amount;
     transactionsByMonth[month] =
@@ -100,15 +99,7 @@ const App: React.FC = () => {
             height: "100vh",
           }}
         >
-          <div
-            style={{
-              width: "80vw",
-              marginTop: "30px",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <div id="graphplane">
             {/* Daily expenditure graph */}
             <div id="graphbox">
               <h2 id="hmm">Expenditure per Day</h2>
@@ -123,15 +114,7 @@ const App: React.FC = () => {
           </div>
           <h1 id="lol">Transaction Table</h1>
           <br></br>
-          <table
-            style={{
-              width: "80%",
-              borderCollapse: "collapse",
-              textAlign: "center",
-              borderRadius: "10px",
-              border: "2px solid red",
-            }}
-          >
+          <table>
             <thead>
               <tr>
                 <th>Vendor</th>
@@ -141,10 +124,17 @@ const App: React.FC = () => {
             </thead>
             <tbody>
               {transactionData.map((transaction, index) => (
-                <tr key={index} style={{color: transaction.amount > 0 ? "green" : "red", }}>
+                <tr
+                  key={index}
+                  style={{ color: transaction.amount > 0 ? "green" : "red" }}
+                >
                   <td> {transaction.vendor}</td>
                   <td>{new Date(transaction.date).toLocaleString()}</td>
-                  <td>{transaction.amount > 0? `+${transaction.amount}` : transaction.amount}</td>
+                  <td>
+                    {transaction.amount > 0
+                      ? `+${transaction.amount}`
+                      : transaction.amount}
+                  </td>
                 </tr>
               ))}
             </tbody>
