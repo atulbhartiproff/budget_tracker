@@ -1,0 +1,27 @@
+.navbuttons{
+    color:white;
+    font-size: 20px;
+    font-weight:bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbuttons:hover{
+    color:blue;
+}
+
+.welcome{
+    color: White;
+    font-family:overpass;
+    font-size:35px;
+    font-weight:bold;
+}
+
+#navi{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    z-index:50;
+    background:transparent;
+    transition: all 0.7s ease-in-out;
+}

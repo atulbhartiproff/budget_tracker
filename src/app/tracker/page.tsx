@@ -16,7 +16,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Register necessary Chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -27,7 +26,6 @@ ChartJS.register(
   Legend
 );
 
-// Sample transaction data
 const transactionData = [
   { vendor: "Dad", date: "2025-01-13T10:00:00", amount: 10000 },
   { vendor: "Swiggy", date: "2025-01-27T12:00:00", amount: -500 },
@@ -37,28 +35,21 @@ const transactionData = [
   { vendor: "Hackathon", date: "2025-02-03T16:00:00", amount: 2000 },
 ];
 
-// interface Transaction {
-//   vendor: string;
-//   date: string;
-//   amount: number;
-// }
 
 const App: React.FC = () => {
-  // Process data for daily expenditure
   const transactionsByDay: { [key: string]: number } = {};
   const transactionsByMonth: { [key: string]: number } = {};
 
   transactionData.forEach((transaction) => {
     const date = new Date(transaction.date);
-    const day = date.toISOString().split("T")[0]; // Format: yyyy-mm-dd
-    const month = date.toISOString().split("T")[0].slice(0, 7); // Format: yyyy-mm
+    const day = date.toISOString().split("T")[0];
+    const month = date.toISOString().split("T")[0].slice(0, 7); 
 
     transactionsByDay[day] = (transactionsByDay[day] || 0) + transaction.amount;
     transactionsByMonth[month] =
       (transactionsByMonth[month] || 0) + transaction.amount;
   });
 
-  // Prepare data for the charts
   const dailyLabels = Object.keys(transactionsByDay);
   const dailyData = Object.values(transactionsByDay);
 
@@ -150,30 +141,10 @@ const App: React.FC = () => {
             </thead>
             <tbody>
               {transactionData.map((transaction, index) => (
-                <tr key={index}>
-                  <td
-                    style={{
-                      color: transaction.amount > 0 ? "green" : "red",
-                    }}
-                  >
-                    {transaction.vendor}
-                  </td>
-                  <td
-                    style={{
-                      color: transaction.amount > 0 ? "green" : "red",
-                    }}
-                  >
-                    {new Date(transaction.date).toLocaleString()}
-                  </td>
-                  <td
-                    style={{
-                      color: transaction.amount > 0 ? "green" : "red",
-                    }}
-                  >
-                    {transaction.amount > 0
-                      ? `+${transaction.amount}`
-                      : transaction.amount}
-                  </td>
+                <tr key={index} style={{color: transaction.amount > 0 ? "green" : "red", }}>
+                  <td> {transaction.vendor}</td>
+                  <td>{new Date(transaction.date).toLocaleString()}</td>
+                  <td>{transaction.amount > 0? `+${transaction.amount}` : transaction.amount}</td>
                 </tr>
               ))}
             </tbody>

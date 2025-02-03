@@ -3,6 +3,12 @@ import { Input } from "../components/input";
 import "./sumbit.css";
 
 const Login: React.FC = () => {
+
+  const handleClick = () => {
+    window.location.href = '/tracker'; 
+  };
+
+
   return (
     <>
       <div className="fixed inset-0 bg-black bg-center pointer-events-none -z-10">
@@ -17,7 +23,7 @@ const Login: React.FC = () => {
           <form className="space-y-2">
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" content="white" />
-            <Input type="submit" value="Login" id="submit" />
+            <Input type="submit" value="Login" id="submit" onClick={handlelogin} />
           </form>
         </div>
       </div>
