@@ -24,7 +24,7 @@ export default function Navbar() {
             <a href="/" className="navbuttons">Home</a>
             <a href="/login" className="navbuttons">Log Out</a>
             <a href="/register" className="navbuttons">Register</a>
-            <a href="#" className="navbuttons">Contact</a>
+            <a href="mailto:atulbhartiproff@gmail.com[ContactDetails]" className="navbuttons">Contact</a>
           </div>
         </div>
       </div>

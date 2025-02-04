@@ -19,7 +19,7 @@ export default function Page() {
           </h1>
           <h3 className="text-[15px] font-bold">
             <span className="text-white font-overpass">
-              Making sure all the budgets are always on track
+            Tracking your expenses is key to managing your money wisely. This expense tracker helps you stay in control effortlessly.
             </span>
             <span className="text-blue-500">.</span>
           </h3>
